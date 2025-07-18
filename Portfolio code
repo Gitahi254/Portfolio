@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .section-heading {
+            font-size: 2.5rem; /* Larger heading for sections */
+            font-weight: 700;
+            color: #1a202c; /* Darker text for headings */
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #4f46e5; /* Indigo accent */
+            border-radius: 2px;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4f46e5; /* Indigo accent */
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* More rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* Darker indigo */
+            transform: translateY(-2px);
+        }
+        .icon-link {
+            transition: transform 0.2s ease;
+        }
+        .icon-link:hover {
+            transform: translateY(-3px);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg py-4 sticky top-0 z-50 rounded-b-xl">
+        <div class="container flex justify-center space-x-8">
+            <a href="#home" class="text-lg font-semibold text-gray-700 hover:text-indigo-600 nav-link">Home</a>
+            <a href="#resume" class="text-lg font-semibold text-gray-700 hover:text-indigo-600 nav-link">Resume</a>
+            <a href="#projects" class="text-lg font-semibold text-gray-700 hover:text-indigo-600 nav-link">Projects</a>
+            <a href="#lab-challenges" class="text-lg font-semibold text-gray-700 hover:text-indigo-600 nav-link">Lab Challenges</a>
+            <a href="#contact" class="text-lg font-semibold text-gray-700 hover:text-indigo-600 nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 rounded-b-3xl shadow-xl">
+        <div class="container">
+            <h1 class="text-5xl font-bold mb-4 leading-tight">Dennis Gitahi Maina</h1>
+            <p class="text-2xl font-light italic mb-8">"Innovating Solutions, Building Futures"</p>
+            <p class="text-lg max-w-2xl mx-auto">
+                A passionate and results-driven professional with expertise in cybersecurity and software development.
+                Dedicated to leveraging technology to solve complex problems and contribute to impactful projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-gray-50">
+        <div class="container">
+            <h2 class="section-heading">Resume Outline</h2>
+
+            <!-- Academic Background -->
+            <div class="card">
+                <h3 class="text-3xl font-semibold text-indigo-700 mb-4">Academic Background</h3>
+                <div class="mb-6">
+                    <h4 class="text-xl font-bold">Bachelor of Science in Information Security and Forensics</h4>
+                    <p class="text-gray-600">KCA University| Main Campus| 2020 - 2024</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Graduated with Honors, GPA: 2.5/4.0, Second class honours</li>
+                        <li>Relevant Coursework: Data Structures, Algorithms, Operating Systems, Network Security, Database Management</li>
+                        <li>Capstone Project: Developed a secure file sharing application using blockchain technology.</li>
+                    </ul>
+                </div>
+                <div>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="card">
+                <h3 class="text-3xl font-semibold text-indigo-700 mb-4">Work Experience</h3>
+                <div class="mb-6">
+                    <h4 class="text-xl font-bold">Software Engineer Intern</h4>
+                    <p class="text-gray-600">Content Aggregation Limited</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Developed and maintained backend services using Python and Django.</li>
+                        <li>Implemented new features for the customer management portal, increasing efficiency by 15%.</li>
+                        <li>Collaborated with a team of 5 engineers on agile development cycles.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold">ICT Officer</h4>
+                    <p class="text-gray-600">Sports Kenya</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Conducted vulnerability assessments and penetration tests on client systems.</li>
+                        <li>Monitored security alerts and responded to incidents, reducing average response time by 20%.</li>
+                        <li>Assisted in the development of security policies and procedures.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="card">
+                <h3 class="text-3xl font-semibold text-indigo-700 mb-4">Certifications</h3>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Security Operations Aanalyst (Ongoing)</li>
+                    <li>Huawei cybersecurity (HCIA) (Issued: 2025)</li>
+                    <li> IBM Cybersecurity Fundanentals (Issued: 2024)</li>
+                    <li> CISCO CCNA level one (Issued: 2023)</li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <h3 class="text-3xl font-semibold text-indigo-700 mb-4">Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Programming Languages:</h4>
+                        <p>Python, JavaScript</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Frameworks & Libraries:</h4>
+                        <p>Django, React, Node.js, Flask, Tailwind CSS</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Cybersecurity Tools:</h4>
+                        <p>Nmap, Metasploit, Wireshark, Burp Suite, Kali Linux, SIEM</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Databases:</h4>
+                        <p>SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Firebase)</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Cloud Platforms:</h4>
+                        <p>AWS, Azure, Google Cloud Platform (GCP)</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Other:</h4>
+                        <p>Git, Docker, Kubernetes, Agile Methodologies, Linux</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container">
+            <h2 class="section-heading">My Projects</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-3">Secure Chat Application</h3>
+                    <p class="text-gray-700 mb-4">
+                        Developed an end-to-end encrypted chat application using Node.js, Express, and Socket.IO.
+                        Features include user authentication, real-time messaging, and secure key exchange.
+                    </p>
+                    <p class="text-gray-600 text-sm mb-4">Technologies: Node.js, Express, Socket.IO, MongoDB, React</p>
+                    <a href="#" class="btn-primary text-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-3">Automated Penetration Testing Tool</h3>
+                    <p class="text-gray-700 mb-4">
+                        A Python-based tool that automates common penetration testing tasks, including
+                        port scanning, vulnerability detection, and basic exploit execution.
+                    </p>
+                    <p class="text-gray-600 text-sm mb-4">Technologies: Python, Scapy, Nmap, Metasploit Framework</p>
+                    <a href="#" class="btn-primary text-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-3">E-commerce Platform Redesign</h3>
+                    <p class="text-gray-700 mb-4">
+                        Led the frontend redesign of an existing e-commerce platform, improving user experience
+                        and mobile responsiveness. Implemented a modern UI with React and Tailwind CSS.
+                    </p>
+                    <p class="text-gray-600 text-sm mb-4">Technologies: React, Tailwind CSS, Redux, RESTful APIs</p>
+                    <a href="#" class="btn-primary text-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Challenges Section -->
+    <section id="lab-challenges" class="py-20 bg-gray-50">
+        <div class="container">
+            <h2 class="section-heading">Lab Challenges</h2>
+
+            <!-- Challenge 1 -->
+            <div class="card">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-3">Web Application SQL Injection</h3>
+                <p class="text-gray-700 mb-2"><strong>Problem Statement:</strong> Identify and exploit SQL injection vulnerabilities in a given web application to extract sensitive data from the database.</p>
+                <p class="text-gray-700 mb-2"><strong>Approach:</strong> Used manual testing techniques combined with automated tools to detect vulnerable parameters. Employed UNION-based and error-based SQL injection methods.</p>
+                <p class="text-gray-700 mb-2"><strong>Tools Used:</strong> Burp Suite, SQLMap, Firefox Developer Tools</p>
+                <div class="mt-4 mb-4">
+                    <img src="https://placehold.co/600x300/e0e7ff/4f46e5?text=SQL+Injection+Screenshot" alt="SQL Injection Screenshot" class="rounded-lg shadow-md mx-auto">
+                </div>
+                <p class="text-gray-700"><strong>Key Lessons Learned:</strong> Understanding the impact of improper input sanitization, the importance of parameterized queries, and effective use of proxies for web application testing.</p>
+            </div>
+
+            <!-- Challenge 2 -->
+            <div class="card">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-3">Buffer Overflow Exploitation</h3>
+                <p class="text-gray-700 mb-2"><strong>Problem Statement:</strong> Exploit a vulnerable C program susceptible to buffer overflow to gain shell access.</p>
+                <p class="text-gray-700 mb-2"><strong>Approach:</strong> Analyzed the program's assembly code, identified the buffer, crafted a malicious payload including NOP sleds and shellcode, and overwrote the return address.</p>
+                <p class="text-gray-700 mb-2"><strong>Tools Used:</strong> GDB, Pwntools, NASM (for shellcode), Linux command line</p>
+                <div class="mt-4 mb-4">
+                    <img src="https://placehold.co/600x300/e0e7ff/4f46e5?text=Buffer+Overflow+Screenshot" alt="Buffer Overflow Screenshot" class="rounded-lg shadow-md mx-auto">
+                </div>
+                <p class="text-gray-700"><strong>Key Lessons Learned:</strong> Deep understanding of memory layout, stack frames, assembly language, and the intricacies of exploit development.</p>
+            </div>
+
+            <!-- Challenge 3 -->
+            <div class="card">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-3">Network Packet Analysis</h3>
+                <p class="text-gray-700 mb-2"><strong>Problem Statement:</strong> Analyze a given PCAP file to identify malicious network activity, extract credentials, and reconstruct communication flows.</p>
+                <p class="text-gray-700 mb-2"><strong>Approach:</strong> Used Wireshark to filter traffic, follow TCP streams, and identify suspicious patterns. Applied various display filters to narrow down relevant packets.</p>
+                <p class="text-gray-700 mb-2"><strong>Tools Used:</strong> Wireshark, Tshark</p>
+                <div class="mt-4 mb-4">
+                    <img src="https://placehold.co/600x300/e0e7ff/4f46e5?text=Packet+Analysis+Screenshot" alt="Packet Analysis Screenshot" class="rounded-lg shadow-md mx-auto">
+                </div>
+                <p class="text-gray-700"><strong>Key Lessons Learned:</strong> Proficiency in network protocol analysis, identifying common attack signatures, and the importance of network forensics in incident response.</p>
+            </div>
+
+            <!-- Add more lab challenges as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-t-3xl shadow-xl">
+        <div class="container text-center">
+            <h2 class="section-heading text-white">Get in Touch</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                I'm always open to discussing new projects, collaborations, or opportunities.
+                Feel free to reach out through any of the channels below!
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="icon-link text-white hover:text-gray-200">
+                    <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.444-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm-.011 0h.012v.001zm-2.001 13.019h4.002V9.018H3.335v11.434z"></path>
+                    </svg>
+                    <span class="block text-lg font-semibold">LinkedIn</span>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="icon-link text-white hover:text-gray-200">
+                    <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.677-.233.677-.521 0-.256-.009-.942-.014-1.847-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.606.069-.606 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.902.833.091-.647.35-1.089.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.391-1.996 1.03-2.693-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.099 2.651.64.697 1.029 1.597 1.029 2.693 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .289.207.61.688.524C19.137 20.19 22 16.438 22 12.017 22 6.484 17.522 2 12 2Z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="block text-lg font-semibold">GitHub</span>
+                </a>
+                <a href="mailto:your.email@example.com" class="icon-link text-white hover:text-gray-200">
+                    <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.667 6.499a2.25 2.25 0 01-2.666 0L1.5 8.67z"></path>
+                        <path d="M22.5 6.25c0-.966-.784-1.75-1.75-1.75H3.25c-.966 0-1.75.784-1.75 1.75l10.5 7.875 10.5-7.875z"></path>
+                    </svg>
+                    <span class="block text-lg font-semibold">Email - gitahimaina101@gmail</span>
+                </a>
+                <a href="tel:+1234567890" class="icon-link text-white hover:text-gray-200">
+                    <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.836 1.446l.741 2.942a3 3 0 01-.697 3.12l-2.43 2.43a18.02 18.02 0 008.614 8.614l2.43-2.43a3 3 0 013.12-.697l2.942.741c.86.226 1.446.976 1.446 1.836V19.5a3 3 0 01-3 3h-2.25C8.04 22.5 2.5 16.96 2.5 10.5V7.5a3 3 0 013-3h.75z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="block text-lg font-semibold">Phone - 0713447540 </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center rounded-t-xl">
+        <div class="container">
+            <p> 2025 Gitahi Maina. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with ❤️ and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for active navigation link highlighting (optional, for visual feedback)
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Highlight when 50% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            link.style.color = '#4a5568'; // Reset color
+                            link.style.fontWeight = 'normal'; // Reset font weight
+                            if (link.getAttribute('href') === '#' + entry.target.id) {
+                                link.classList.add('active');
+                                link.style.color = '#4f46e5'; // Active color
+                                link.style.fontWeight = 'bold'; // Active font weight
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Handle initial load to set active link for the first section
+            if (window.location.hash) {
+                const initialTarget = document.querySelector(window.location.hash);
+                if (initialTarget) {
+                    const correspondingLink = document.querySelector(`.nav-link[href="${window.location.hash}"]`);
+                    if (correspondingLink) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            link.style.color = '#4a5568';
+                            link.style.fontWeight = 'normal';
+                        });
+                        correspondingLink.classList.add('active');
+                        correspondingLink.style.color = '#4f46e5';
+                        correspondingLink.style.fontWeight = 'bold';
+                    }
+                }
+            } else {
+                // If no hash, set Home as active
+                const homeLink = document.querySelector('.nav-link[href="#home"]');
+                if (homeLink) {
+                    homeLink.classList.add('active');
+                    homeLink.style.color = '#4f46e5';
+                    homeLink.style.fontWeight = 'bold';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
